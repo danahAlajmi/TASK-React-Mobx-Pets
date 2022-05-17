@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PetItem from "./PetItem";
 import petStore from "../stores/petStore";
 import { observer } from "mobx-react";
+import PetCreateModal from "./PetCreateModal";
 
 function PetsList() {
   const [query, setQuery] = useState("");
@@ -23,6 +24,8 @@ function PetsList() {
               <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
                 Fur-ends
               </h1>
+              <PetCreateModal />
+              <br />
               <div class="input-group rounded">
                 <input
                   type="search"

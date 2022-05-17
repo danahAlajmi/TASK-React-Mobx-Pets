@@ -1,4 +1,6 @@
 import petStore from "../stores/petStore";
+import PetUpdate from "./PetUpdate";
+import { observer } from "mobx-react";
 
 function PetItem({ pet }) {
   return (
@@ -14,9 +16,11 @@ function PetItem({ pet }) {
           >
             Adopt
           </button>
+
+          <PetUpdate pet={pet} />
         </div>
       </div>
     </div>
   );
 }
-export default PetItem;
+export default observer(PetItem);
